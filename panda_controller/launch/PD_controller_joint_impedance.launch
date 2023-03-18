@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="PD_controller" pkg="panda_controller" type="PD_controller_joint_impedance" respawn="false" output="screen">
+  </node>
+  
+  
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find panda_controller)/config/PID_controller.yaml" />
+  <node name="PID_controller" pkg="panda_controller" type="PID_controller" respawn="false" output="screen">
+  </node>
+  
+  
+</launch>
