@@ -19,6 +19,18 @@ The final goals of our work are to:
 - design a structure that can hold the sensing device in place and mount it on the _Franka Emika Panda_ robot's end-effector 
 - attempt a simple harvesting task exploiting the developed device within a force control loop on the gripper and an external depth camera mounted on the robotic arm.
 
+---------
+
+## _Guide for this repository_
+This repository contains some of the developed scripts during my Thesis. Particularly, it contains the most important ROS scripts to perform the online strawberry picking exploiting the estimated force feedback.
+
+- _panda_controller_ contains the PD controller for the 7-DoF Franka Emika Panda manipulator
+- _easy_handeye_ is a ROS package used to perform eye-in-hand calibration (https://github.com/IFL-CAMP/easy_handeye)
+- 
+
+
+
+
 
 
 
