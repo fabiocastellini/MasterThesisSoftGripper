@@ -6,6 +6,7 @@
 > Co-supervisor: _Francesco Visentin, PhD_ <br />
 > Academic Year: _2021-2022_
 
+
 ## _Abstract_
 Soft robotics, and particularly soft gripping technology, faces many challenges. Due to several strict requirements such as small dimensions, low cost and efficient manufacturing process, accurate sensing capabilities, the development of soft grippers is still an open research problem. In this work a hemispherical deformable and cheap to manufacture tactile sensor is proposed and characterized. The device is 3D printed using a stereolithography (SLA) 3D printer and is made of a semi-transparent elastic polymer resin that is properly cured afterwards. The overall aim is to sense normal and tangential forces applied to the gripper. The gripper is designed and thought for agricultural applications such as grasping delicate fruits and vegetables.
 
