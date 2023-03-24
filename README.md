@@ -29,9 +29,13 @@ This repository contains some of the developed scripts during my Thesis. Particu
 - _darknet_ros_ is a ROS package used to exploit a pre-trained Yolo object detection Neural Network (https://github.com/leggedrobotics/darknet_ros)
 - _tesi_gripper_ is a ROS package that contains the developed online pipeline to perform the picking of a ripe strawberry, exploiting RGBD camera's information and real-time force feedback
 
-The "plant_detection_node.py" script can be summed up in the following Finite State Machine:
-1) 
-2)
+The "plant_detection_node.py" script can be summed up in the following Finite State Machine: <br>
+- **[State 1] Find plant**: once the node is initialized, the RGB image given by the Realsense2 camera is exploited by a pre-trained CNN (YoloV3) to localize a potted plant, that is our target. Starting from the geometric center of the 2D detected bounding box we compute its 3D coordinate exploiting the depth capabilities of the Realsense2 camera.
+- **[State 2] Plant approach**: using the estimated baricenter of the strawberry plant as a reference, plan and execute a linear trajectory to approach an upper-left target cartesian point, so that the camera is able to have a closer view of the plant.
+- **[State 3] Find ripe strawberry**: using a CNN (YoloV2) fine-tuned on a strawberry dataset, detect a target strawberry localizing it with a 2D bounding box, computing the 3D associated baricenter of the fruit and classifying it as ripe or not.
+- **[State 4] Strawberry approach**: once a ripe strawberry has been detected, plan and execute a linear trajectory to position the manipular's gripper in a suitable manner, so that picking can be performed. This is done starting from the estimated 3D baricenter of the strawberry and assuming a normal displacement of 2cm with respect to the elastic domes.
+- **[State 5] Strawberry picking**: at this point, real-time force feedback is provided through the K-Nearest Regressor trained model and the gripper closes until a certain threshold (manual tunings suggest 1.75N) of normal force is measured by the developed sensor. Afterwards, the strawberry is harvested from the plant by moving the gripper back, while slightly rotating it towards the ground.
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/76775232/227550597-063986f5-8253-4870-8272-8c18b44be32f.png" alt="pipeline" width="700"/>
