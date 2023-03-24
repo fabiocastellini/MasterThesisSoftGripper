@@ -27,10 +27,13 @@ This repository contains some of the developed scripts during my Thesis. Particu
 - _panda_controller_ contains the PD controller for the 7-DoF Franka Emika Panda manipulator
 - _easy_handeye_ is a ROS package used to perform eye-in-hand calibration (https://github.com/IFL-CAMP/easy_handeye)
 - _darknet_ros_ is a ROS package used to exploit a pre-trained Yolo object detection Neural Network (https://github.com/leggedrobotics/darknet_ros)
+- _tesi_gripper_ is a ROS package that contains the developed online pipeline to perform the picking of a ripe strawberry, exploiting RGBD camera's information and real-time force feedback
 
+The "plant_detection_node.py" script can be summed up in the following Finite State Machine:
+1) a 
+2)
 
-
-
+![Uploading pipeline.png…]()
 
 
 
