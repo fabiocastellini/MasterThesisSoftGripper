@@ -30,11 +30,11 @@ This repository contains some of the developed scripts during my Thesis. Particu
 - _tesi_gripper_ is a ROS package that contains the developed online pipeline to perform the picking of a ripe strawberry, exploiting RGBD camera's information and real-time force feedback
 
 The "plant_detection_node.py" script can be summed up in the following Finite State Machine:
-1) a 
+1) 
 2)
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/76775232/227550597-063986f5-8253-4870-8272-8c18b44be32f.png" alt="pipeline" width="500"/>
+  <img src="https://user-images.githubusercontent.com/76775232/227550597-063986f5-8253-4870-8272-8c18b44be32f.png" alt="pipeline" width="700"/>
 </p>
 
 
