@@ -33,7 +33,10 @@ The "plant_detection_node.py" script can be summed up in the following Finite St
 1) a 
 2)
 
-![pipeline](https://user-images.githubusercontent.com/76775232/227550597-063986f5-8253-4870-8272-8c18b44be32f.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/76775232/227550597-063986f5-8253-4870-8272-8c18b44be32f.png" alt="pipeline" width="500"/>
+</p>
+
 
 
 
