@@ -1,6 +1,6 @@
 # 1 CAMERA REALSENSE NODE
-roslaunch realsense2_camera rs_camera.launch align_depth:=true
-roslaunch realsense2_camera rs_aligned_depth.launch 
+- roslaunch realsense2_camera rs_camera.launch align_depth:=true
+- roslaunch realsense2_camera rs_aligned_depth.launch 
 
 # 2 CAMERA REALSENSE + SLAM 
 roslaunch rtabmap_ros rtabmap.launch \
