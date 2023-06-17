@@ -20,16 +20,16 @@ roslaunch darknet_ros darknet_ros_rs.launch
 rosrun tesi_gripper plant_detector_node.py 
 
 # 5 Raspberry images:
-ssh fabio@192.168.137.204
-pw: raspberry
-export ROS_HOSTNAME=fabio-pc
-export ROS_MASTER_URI=http://James:11311
+- ssh fabio@192.168.137.204
+- pw: raspberry
+- export ROS_HOSTNAME=fabio-pc
+- export ROS_MASTER_URI=http://James:11311
 
 # 6 Force feedback KNN
 rosrun tesi_gripper force_estimation_node.py 
 
 # ATI Sensor:
-ATI: collegare PoE nella parte sotto del PC e alla presa sotto
+- ATI: collegare PoE nella parte sotto del PC e alla presa sotto
 ref: http://wiki.ros.org/netft_utils
 - roscore su james con pw altair
 - rosrun netft_utils netft_utils_sim
@@ -37,9 +37,9 @@ ref: http://wiki.ros.org/netft_utils
 
 
 # Per visualizzare trasformazioni:
-tf_echo <source_frame> <target_frame> 
-rosrun tf tf_echo /panda_link0 /panda_link8
-rosrun tf tf_echo /panda_link0 /panda_EE
+- tf_echo <source_frame> <target_frame> 
+- rosrun tf tf_echo /panda_link0 /panda_link8
+- rosrun tf tf_echo /panda_link0 /panda_EE
 
 - Translation: [0.106, 0.136, 0.717]
 - Rotation: in Quaternion [0.638, -0.293, 0.669, -0.245]
@@ -49,9 +49,9 @@ rosrun tf tf_echo /panda_link0 /panda_EE
 
 # Per eseguire traiettorie:
 1) lanciare force control sul panda (ACTIVATE FCI from 192.168.3.1/desk!!!): 
-ssh koga@Koga 
-pw: solita
-roslaunch panda_force_ctrl panda_force_ctrl.launch 
+- ssh koga@Koga 
+- pw: solita
+- roslaunch panda_force_ctrl panda_force_ctrl.launch 
 
 2) lanciare nodo dal mio pc
 roslaunch panda_controller PD_controller.launch 
@@ -61,23 +61,23 @@ rqt -> plugins -> services -> service caller -> toogle play -> call
 
 
 # INSTALL PANDA LIBRARY
-https://projects.saifsidhik.page/panda_robot/
-https://github.com/justagist/panda_robot
-sudo pip install panda-robot
-sudo pip install numba
+- https://projects.saifsidhik.page/panda_robot/
+- https://github.com/justagist/panda_robot
+- sudo pip install panda-robot
+- sudo pip install numba
 
-sudo apt install ros-noetic-libfranka
-sudo apt install ros-noetic-franka-ros
-sudo apt install ros-noetic-panda-moveit-config
+- sudo apt install ros-noetic-libfranka
+- sudo apt install ros-noetic-franka-ros
+- sudo apt install ros-noetic-panda-moveit-config
 
-sudo pip install rospy_message_converter
-rosdep install --from-paths src --ignore-src -r -y
+- sudo pip install rospy_message_converter
+- rosdep install --from-paths src --ignore-src -r -y
 
 
 # HAND EYE:
-roslaunch realsense2_camera rs_camera.launch align_depth:=true
-roslaunch easy_handeye calibrate_agri.launch
-take sample; export uri
+- roslaunch realsense2_camera rs_camera.launch align_depth:=true
+- roslaunch easy_handeye calibrate_agri.launch
+- take sample; export uri
 
 # RESULTS (camera al contrario):
 translation: 
